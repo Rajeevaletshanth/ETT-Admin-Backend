@@ -1,0 +1,77 @@
+
+//Register
+POST http://localhost:5005/admin/superadmin_register
+Content-Type: application/json
+
+{
+    "username" : "LTW Tech",
+    "address" : "Milan, Italy",
+    "authority" : {"role" : ["superadmin", "admin"]},
+    "phone_no" : "0123456789",
+    "email" : "admin@ltwtech.it",
+    "password" : "1234",
+    "avatar" : "1667793288133-668-6689202_avatar-profile-hd-png-download.png"
+}
+
+
+//Create
+POST http://localhost:5005/superadmin/create
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiYXZhdGFyIjoiMTY2Nzg5NjA2Nzc5MS1kZWZhdWx0LWF2YXRhci5wbmciLCJ1c2VybmFtZSI6IkxUVyBUZWNoIiwiZW1haWwiOiJhZG1pbjJAbHR3dGVjaC5pdCIsImF1dGhvcml0eSI6IntcInJvbGVcIjpbXCJzdXBlcmFkbWluXCIsXCJhZG1pblwiLFwidXNlclwiXX0iLCJpYXQiOjE2Njc4OTY5ODcsImV4cCI6MTY2NzkwMDU4N30.6H6TWZq_jwzqFs5_NGvoyYbOENBJ-Lb8694-2r4y__Y
+Content-Type: application/json
+
+{
+    "username" : "LTW Tech",
+    "authority" : {"role" : ["superadmin", "admin", "user"]},
+    "email" : "admin@ltwtech.it",
+    "password" : "1234"
+}
+
+###
+//Get All
+GET http://localhost:5005/superadmin/list
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiYXZhdGFyIjoiMTY2Nzg5NjA2Nzc5MS1kZWZhdWx0LWF2YXRhci5wbmciLCJ1c2VybmFtZSI6IkxUVyBUZWNoIiwiZW1haWwiOiJhZG1pbjJAbHR3dGVjaC5pdCIsImF1dGhvcml0eSI6IntcInJvbGVcIjpbXCJzdXBlcmFkbWluXCIsXCJhZG1pblwiLFwidXNlclwiXX0iLCJpYXQiOjE2Njc4OTY5ODcsImV4cCI6MTY2NzkwMDU4N30.6H6TWZq_jwzqFs5_NGvoyYbOENBJ-Lb8694-2r4y__Y
+Content-Type: application/json
+
+###
+//Unverified users list
+GET http://localhost:5005/superadmin/unverified_users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwiYXZhdGFyIjoiMTY2Nzk2NDg1NjAwNi1kZXBvc2l0cGhvdG9zXzMyNDc0NTE5NC1zdG9jay1waG90by1hbm9ueW1vdXMtbWFuLWhpZGluZy1oaXMtZmFjZS5qcGciLCJ1c2VybmFtZSI6IkxUVyBUZWNoIiwiZW1haWwiOiJhZG1pbkBsdHd0ZWNoLml0IiwiYXV0aG9yaXR5Ijoie1wicm9sZVwiOltcInN1cGVyYWRtaW5cIixcImFkbWluXCIsXCJ1c2VyXCJdfSIsImlhdCI6MTY2OTAxMDgzNywiZXhwIjoxNjY5MDE0NDM3fQ.qB1V2IxDlov2Od6WO4bqTHiv6fxc_yviKmdhimEbQ6Q
+Content-Type: application/json
+
+###
+//Verify user
+GET http://localhost:5005/superadmin/verify_user/54
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwiYXZhdGFyIjoiMTY2Nzk2NDg1NjAwNi1kZXBvc2l0cGhvdG9zXzMyNDc0NTE5NC1zdG9jay1waG90by1hbm9ueW1vdXMtbWFuLWhpZGluZy1oaXMtZmFjZS5qcGciLCJ1c2VybmFtZSI6IkxUVyBUZWNoIiwiZW1haWwiOiJhZG1pbkBsdHd0ZWNoLml0IiwiYXV0aG9yaXR5Ijoie1wicm9sZVwiOltcInN1cGVyYWRtaW5cIixcImFkbWluXCIsXCJ1c2VyXCJdfSIsImlhdCI6MTY2OTAxNDQ1NCwiZXhwIjoxNjY5MTAwODU0fQ._sn05jQi2GG0jtxr8BF_3M54s-u82aXniOMqkBoUO3U
+Content-Type: application/json
+
+###
+//Get by id
+GET http://localhost:5005/superadmin/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiYXZhdGFyIjoiMTY2Nzg5NjA2Nzc5MS1kZWZhdWx0LWF2YXRhci5wbmciLCJ1c2VybmFtZSI6IkxUVyBUZWNoIiwiZW1haWwiOiJhZG1pbjJAbHR3dGVjaC5pdCIsImF1dGhvcml0eSI6IntcInJvbGVcIjpbXCJzdXBlcmFkbWluXCIsXCJhZG1pblwiLFwidXNlclwiXX0iLCJpYXQiOjE2Njc4OTY5ODcsImV4cCI6MTY2NzkwMDU4N30.6H6TWZq_jwzqFs5_NGvoyYbOENBJ-Lb8694-2r4y__Y
+Content-Type: application/json
+
+###
+//Get by mail
+POST http://localhost:5005/superadmin/get_bymail
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiYXZhdGFyIjoiMTY2Nzg5NjA2Nzc5MS1kZWZhdWx0LWF2YXRhci5wbmciLCJ1c2VybmFtZSI6IkxUVyBUZWNoIiwiZW1haWwiOiJhZG1pbjJAbHR3dGVjaC5pdCIsImF1dGhvcml0eSI6IntcInJvbGVcIjpbXCJzdXBlcmFkbWluXCIsXCJhZG1pblwiLFwidXNlclwiXX0iLCJpYXQiOjE2Njc4OTY5ODcsImV4cCI6MTY2NzkwMDU4N30.6H6TWZq_jwzqFs5_NGvoyYbOENBJ-Lb8694-2r4y__Y
+Content-Type: application/json
+
+{
+    "email" : "admin2@ltwtech.it"
+}
+
+###
+//Access control
+PUT http://localhost:5005/superadmin/access_control/43
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwiYXZhdGFyIjoiMTY2Nzk2NDg1NjAwNi1kZXBvc2l0cGhvdG9zXzMyNDc0NTE5NC1zdG9jay1waG90by1hbm9ueW1vdXMtbWFuLWhpZGluZy1oaXMtZmFjZS5qcGciLCJ1c2VybmFtZSI6IkxUVyBUZWNoIiwiZW1haWwiOiJhZG1pbkBsdHd0ZWNoLml0IiwiYXV0aG9yaXR5Ijoie1wicm9sZVwiOltcInN1cGVyYWRtaW5cIixcImFkbWluXCIsXCJ1c2VyXCJdfSIsImlhdCI6MTY2ODE1MDY1OSwiZXhwIjoxNjY4MTU0MjU5fQ.u8JvHINXBEMgLMjn_aI-gMtNjE2EZ9Bt3Gofx3VFmD4
+Content-Type: application/json
+
+{
+    "is_deleted" : true
+}
+
+###
+//Delete usere
+DELETE http://localhost:5005/superadmin/delete/4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiYXZhdGFyIjoiMTY2Nzg5NjA2Nzc5MS1kZWZhdWx0LWF2YXRhci5wbmciLCJ1c2VybmFtZSI6IkxUVyBUZWNoIiwiZW1haWwiOiJhZG1pbjJAbHR3dGVjaC5pdCIsImF1dGhvcml0eSI6IntcInJvbGVcIjpbXCJzdXBlcmFkbWluXCIsXCJhZG1pblwiLFwidXNlclwiXX0iLCJpYXQiOjE2Njc4OTY5ODcsImV4cCI6MTY2NzkwMDU4N30.6H6TWZq_jwzqFs5_NGvoyYbOENBJ-Lb8694-2r4y__Y
+Content-Type: application/json

@@ -1,0 +1,85 @@
+###
+//Register
+POST http://localhost:5005/user/register
+Content-Type: application/json
+
+{
+    "username" : "LTW Tech",
+    "address" : "Milan, Italy",
+    "authority" : {"role" : ["user"]},
+    "phone_no" : "0123456789",
+    "email" : "user1@ltwtech.it",
+    "password" : "1234",
+    "avatar" : "1667793288133-668-6689202_avatar-profile-hd-png-download.png"
+}
+
+###
+//Login
+POST http://localhost:5005/user/login
+Content-Type: application/json
+
+{
+    "email" : "user1@ltwtech.it",
+    "password" : "1234",
+    "signedIn" : false
+}
+
+###
+//Get Admin
+GET http://localhost:5005/user/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiYXZhdGFyIjoiMTY2Nzc5MzI4ODEzMy02NjgtNjY4OTIwMl9hdmF0YXItcHJvZmlsZS1oZC1wbmctZG93bmxvYWQucG5nIiwidXNlcm5hbWUiOiJMVFcgVGVjaCIsImVtYWlsIjoidXNlcjFAbHR3dGVjaC5pdCIsImF1dGhvcml0eSI6IntcInJvbGVcIjpbXCJ1c2VyXCJdfSIsImlhdCI6MTY2OTAyNjIyNywiZXhwIjoxNjY5MDI5ODI3fQ.qlAQ7db6GlFIc_xG_-6MVCdX1dBCCZUQZWgb5H4hgoc
+
+
+###
+//Edit admin
+PUT http://localhost:5005/user/edit/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiYXZhdGFyIjoiMTY2Nzc5MzI4ODEzMy02NjgtNjY4OTIwMl9hdmF0YXItcHJvZmlsZS1oZC1wbmctZG93bmxvYWQucG5nIiwidXNlcm5hbWUiOiJMVFcgVGVjaCIsImVtYWlsIjoidXNlcjFAbHR3dGVjaC5pdCIsImF1dGhvcml0eSI6IntcInJvbGVcIjpbXCJ1c2VyXCJdfSIsImlhdCI6MTY2OTAyNjIyNywiZXhwIjoxNjY5MDI5ODI3fQ.qlAQ7db6GlFIc_xG_-6MVCdX1dBCCZUQZWgb5H4hgoc
+Content-Type: application/json
+
+{
+    "name" : "ALEX",
+    "address" : "123, Main Rd, Mannar",
+    "website" : "travelagent.com",
+    "phone_no" : "5678901235",
+    "vat_id" : "ASDFGHJKLP098",
+    "profile" : "1660632804460-LTWDentalCare-HomeLayout.png"
+}
+
+###
+PUT http://localhost:5005/user/access_control/9
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsImVtYWlsIjoiYWRtaW5AbHV4dXJ5Y2Fycy5pdCIsImlhdCI6MTY2MDg5MDk5NiwiZXhwIjoxNjYwODk0NTk2fQ.JuURSeIhtk2JMcpeB8gdME_1gCiveOWxcsGxEuHd8YA
+Content-Type: application/json
+
+{
+    "is_deleted" : false
+}
+
+###
+DELETE http://localhost:5005/user/delete/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiYXZhdGFyIjoiMTY2Nzc5MzI4ODEzMy02NjgtNjY4OTIwMl9hdmF0YXItcHJvZmlsZS1oZC1wbmctZG93bmxvYWQucG5nIiwidXNlcm5hbWUiOiJMVFcgVGVjaCIsImVtYWlsIjoidXNlcjFAbHR3dGVjaC5pdCIsImF1dGhvcml0eSI6IntcInJvbGVcIjpbXCJ1c2VyXCJdfSIsImlhdCI6MTY2OTAyNjIyNywiZXhwIjoxNjY5MDI5ODI3fQ.qlAQ7db6GlFIc_xG_-6MVCdX1dBCCZUQZWgb5H4hgoc
+
+###
+POST http://localhost:5005/user/forgot_password
+Content-Type: application/json
+
+{
+    "email" : "vjvfc2k16@gmail.com"
+}
+
+###
+POST http://localhost:5005/user/reset_password/17/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InZqdmZjMmsxNkBnbWFpbC5jb20iLCJpZCI6MTcsImlhdCI6MTY2NzM3ODYyMCwiZXhwIjoxNjY3Mzc4NjgwfQ.16tBQdQu6yhLWBwYslPEoW6cVGkfCO0cz_sCMBoInsI
+Content-Type: application/json
+
+{
+    "password" : "12345"
+}
+
+###
+PUT http://localhost:5005/user/change_password/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiYXZhdGFyIjoiMTY2Nzc5MzI4ODEzMy02NjgtNjY4OTIwMl9hdmF0YXItcHJvZmlsZS1oZC1wbmctZG93bmxvYWQucG5nIiwidXNlcm5hbWUiOiJMVFcgVGVjaCIsImVtYWlsIjoidXNlcjFAbHR3dGVjaC5pdCIsImF1dGhvcml0eSI6IntcInJvbGVcIjpbXCJ1c2VyXCJdfSIsImlhdCI6MTY2OTAyNjIyNywiZXhwIjoxNjY5MDI5ODI3fQ.qlAQ7db6GlFIc_xG_-6MVCdX1dBCCZUQZWgb5H4hgoc
+Content-Type: application/json
+
+{
+    "currentPassword" : "1234",
+    "newPassword" : "12345"
+}

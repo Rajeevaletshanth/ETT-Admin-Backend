@@ -1,0 +1,31 @@
+#Attach Card
+POST http://localhost:5005/card/add_card/6
+Content-Type: application/json
+
+{
+    "customer_name": "Alex",
+    "name": "Alex", //Card holdername
+    "email": "vjvfc2k16@gmail.com",
+    "type": "card",
+    "card_no": "5555555555554444",
+    "exp_month": "11",
+    "exp_year": "24",
+    "cvc": "315",
+    "cardId": "cc-50-RZMph9e9EB",
+    "last4Number": "4444",
+    "cardType": "MASTER",
+    "primary_card": "false"
+}
+
+###
+#Detach Card
+POSt http://localhost:5005/card/remove_card/6
+Content-Type: application/json
+
+{
+    "card_id" : "cc-52-ckqiREkG7A"
+}
+
+###
+//Get all cards by id
+GET http://localhost:5005/card/get_allcards/6

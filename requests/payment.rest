@@ -1,0 +1,29 @@
+###
+//Capture a charge
+POST http://localhost:5005/payment/create_draft_invoice
+Content-Type: application/json
+
+{
+    "admin_id": "6",
+    "products_det": [{"product_id":"prod_MoqJQYl4h2Vvxe", "quantity": 3}],
+    "quantity": 3,
+    "currency": "eur"
+}
+
+###
+//Direct payment
+POST http://localhost:5005/payment/direct_payment
+Content-Type: application/json
+
+{
+    "admin_id": "6",
+    "amount": 20,
+    "card_id": "cc-54-OwMIEz58OP",
+    "currency": "eur",
+    "receipt_email": "vjvfc2k16@gmail.com"
+}
+
+###
+//Checkout session
+POST http://localhost:5005/payment/checkout_session
+Content-Type: application/json

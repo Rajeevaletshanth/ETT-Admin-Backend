@@ -1,0 +1,32 @@
+#Create Product
+POST http://localhost:5005/product/create_product
+Content-Type: application/json
+
+{
+    "product_name": "Test Product",
+    "price": "50", 
+    "image": "1667563161639-redbus_india_logo.png",
+    "currency": "eur"
+}
+
+###
+#Create Subscription
+POST http://localhost:5005/product/create_subscription
+Content-Type: application/json
+
+{
+    "product_name": "Test Subscription",
+    "price": "50", 
+    "interval": "month",
+    "image": "1667563161639-redbus_india_logo.png",
+    "currency": "eur"
+}
+
+###
+//Remove product
+PUT http://localhost:5005/product/remove
+Content-Type: application/json
+
+{
+    "product_id": "prod_MoqayhGEdMr2pw"
+}
