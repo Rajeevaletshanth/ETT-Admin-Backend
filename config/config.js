@@ -6,5 +6,5 @@ module.exports = {
     'pgport':5432,
     'pguser':'postgres',
     'pgpassword':'root',
-    'pgdatabase':'real_estate_tokenization'
+    'pgdatabase':'ett'
 };

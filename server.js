@@ -78,16 +78,17 @@ app.use(requestIp.mw())
 //Welcome Route
 app.get('/validate', authenticateToken, (req, res) => {
     // res.json(req.user)
-    res.send({"message" : "Welcome to Real Estate Tokenization Engine...", "authenticate" : true})
+    res.send({"message" : "Welcome to ETT Engine...", "authenticate" : true})
 })
 
 app.get('/superadmin/validate', adminAuthenticateToken, (req, res) => {
     // res.json(req.user)
-    res.send({"message" : "Welcome to Real Estate Tokenizationg Engine...", "authenticate" : true})
+    res.send({"message" : "Welcome to ETTg Engine...", "authenticate" : true})
 })
 
 //Routes
 const adminRoute = require('./routes/adminRoute');
+const moderatorRoute = require('./routes/moderatorRoute');
 const userRoute = require('./routes/userRoute');
 const superadminRoute = require('./routes/superadminRoute');
 const uploadRoute = require('./routes/uploadRoute');
@@ -97,6 +98,7 @@ const paymentRoute = require('./routes/paymentRoute');
 
 
 app.use('/admin', adminRoute);
+app.use('/moderator', moderatorRoute);
 app.use('/user', userRoute);
 app.use('/superadmin', superadminRoute);
 app.use('/card', cardRoute);
@@ -165,6 +167,6 @@ app.use(function(err, req, res, next) {
 });
 
 
-app.listen(process.env.PORT, () => console.log(`Real Estate Tokenization engine on live on port ${process.env.PORT}!`))
+app.listen(process.env.PORT, () => console.log(`ETT engine on live on port ${process.env.PORT}!`))
 
 module.exports = app;

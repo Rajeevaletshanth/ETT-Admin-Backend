@@ -12,7 +12,7 @@ const PaymentCustomer = database.define('payment_customer', {
         },       
 
         admin_id:{
-            type: Sequelize.INTEGER,
+            type: Sequelize.STRING,
             allowNull: false,
         },
 

@@ -16,7 +16,7 @@ CREATE TABLE IF NOT EXISTS public.product
 CREATE TABLE IF NOT EXISTS public.payment
 (
     id SERIAL PRIMARY KEY,
-    admin_id INTEGER NOT NULL,
+    admin_id VARCHAR(20) NOT NULL,
     payment_intent_id VARCHAR(100) NOT NULL,
     product_name VARCHAR(100),
     product_id VARCHAR(100),

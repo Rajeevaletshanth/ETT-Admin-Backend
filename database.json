@@ -4,6 +4,6 @@
       "user": "postgres",
       "password": "root", 
       "host": "localhost",
-      "database": "real_estate_tokenization"
+      "database": "ett"
     }
 }

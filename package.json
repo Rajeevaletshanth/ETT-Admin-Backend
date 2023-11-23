@@ -1,7 +1,7 @@
 {
-  "name": "real_estate_tokenization",
+  "name": "ett",
   "version": "1.0.0",
-  "description": "Real estate tokenization backend",
+  "description": "ETT backend",
   "main": "server.js",
   "scripts": {
     "server": "nodemon server.js",
