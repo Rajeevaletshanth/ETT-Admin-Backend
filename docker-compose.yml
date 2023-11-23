@@ -3,7 +3,7 @@ services:
   server:
     build: .
     # image: rajeev770/ebb_server:latest
-    container_name: real_estate_tokenization_server
+    container_name: ett_server
     ports:
       - '5005:5005'
     depends_on:

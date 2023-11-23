@@ -11,7 +11,7 @@ const Card = database.define('card', {
         },       
 
         admin_id:{
-            type: Sequelize.INTEGER,
+            type: Sequelize.STRING,
             allowNull: false,
         },
 

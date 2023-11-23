@@ -1,5 +1,5 @@
 
-//Register
+###Register
 POST http://localhost:5005/admin/superadmin_register
 Content-Type: application/json
 
@@ -14,15 +14,15 @@ Content-Type: application/json
 }
 
 
-//Create
+###Create
 POST http://localhost:5005/superadmin/create
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiYXZhdGFyIjoiMTY2Nzg5NjA2Nzc5MS1kZWZhdWx0LWF2YXRhci5wbmciLCJ1c2VybmFtZSI6IkxUVyBUZWNoIiwiZW1haWwiOiJhZG1pbjJAbHR3dGVjaC5pdCIsImF1dGhvcml0eSI6IntcInJvbGVcIjpbXCJzdXBlcmFkbWluXCIsXCJhZG1pblwiLFwidXNlclwiXX0iLCJpYXQiOjE2Njc4OTY5ODcsImV4cCI6MTY2NzkwMDU4N30.6H6TWZq_jwzqFs5_NGvoyYbOENBJ-Lb8694-2r4y__Y
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwiYXZhdGFyIjoiL2ltZy9hdmF0YXJzL3RodW1iLTEuanBnIiwidXNlcm5hbWUiOiJMVFcgVGVjaCIsImVtYWlsIjoiYWRtaW5AbHR3dGVjaC5pdCIsImF1dGhvcml0eSI6IntcInJvbGVcIjpbXCJzdXBlcmFkbWluXCIsXCJhZG1pblwiLFwidXNlclwiXX0iLCJpYXQiOjE3MDA0NjM5MDgsImV4cCI6MTcwMDQ2NzUwOH0.bARGTV6LV3PJfl7hTywlIynEecO8n2HRKeoPPhaLdt8
 Content-Type: application/json
 
 {
-    "username" : "LTW Tech",
+    "username" : "Alex",
     "authority" : {"role" : ["superadmin", "admin", "user"]},
-    "email" : "admin@ltwtech.it",
+    "email" : "alex@gmail.com",
     "password" : "1234"
 }
 
@@ -58,6 +58,16 @@ Content-Type: application/json
 
 {
     "email" : "admin2@ltwtech.it"
+}
+
+###
+//Lead reset password
+POST http://localhost:5005/superadmin/lead_reset_password
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiYXZhdGFyIjoiMTY2Nzg5NjA2Nzc5MS1kZWZhdWx0LWF2YXRhci5wbmciLCJ1c2VybmFtZSI6IkxUVyBUZWNoIiwiZW1haWwiOiJhZG1pbjJAbHR3dGVjaC5pdCIsImF1dGhvcml0eSI6IntcInJvbGVcIjpbXCJzdXBlcmFkbWluXCIsXCJhZG1pblwiLFwidXNlclwiXX0iLCJpYXQiOjE2Njc4OTY5ODcsImV4cCI6MTY2NzkwMDU4N30.6H6TWZq_jwzqFs5_NGvoyYbOENBJ-Lb8694-2r4y__Y
+Content-Type: application/json
+
+{
+    "email" : "vjvfc2k16@gmail.com"
 }
 
 ###

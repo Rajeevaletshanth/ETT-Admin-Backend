@@ -2,7 +2,7 @@
 CREATE TABLE IF NOT EXISTS public.payment_customer
 (
     id SERIAL PRIMARY KEY,
-    admin_id INTEGER NOT NULL UNIQUE,
+    admin_id VARCHAR(20) NOT NULL UNIQUE,
     customer_id VARCHAR(100) NOT NULL UNIQUE,
     is_deleted BOOLEAN DEFAULT false,
     created_at TIMESTAMP,
@@ -13,7 +13,7 @@ CREATE TABLE IF NOT EXISTS public.payment_customer
 CREATE TABLE IF NOT EXISTS public.card
 (
     id SERIAL PRIMARY KEY,
-    admin_id INTEGER NOT NULL,
+    admin_id VARCHAR(20) NOT NULL,
     payment_method_id VARCHAR(100) NOT NULL UNIQUE,
     card_holder_name VARCHAR(50) NOT NULL,
     card_id VARCHAR(50) NOT NULL,

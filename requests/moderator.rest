@@ -1,38 +1,41 @@
 ###
 //Register
-POST http://localhost:5005/admin/register
+POST http://localhost:5005/moderator/register
 Content-Type: application/json
 
 {
     "username" : "LTW Tech",
     "address" : "Milan, Italy",
-    "authority" : {"role" : ["superadmin", "admin", "user"]},
+    "company" : "LTW Technologies",
+    "company_type" : "Software",
+    "website" : "www.ltwtech.it",
+    "authority" : {"role" : ["client"]},
     "phone_no" : "0123456789",
-    "email" : "admin@ltwtech.it",
+    "email" : "client@ltwtech.it",
     "password" : "1234",
     "avatar" : "1667793288133-668-6689202_avatar-profile-hd-png-download.png"
 }
 
 ###
 //Login
-POST http://localhost:5005/admin/login
+POST http://localhost:5005/moderator/login
 Content-Type: application/json
 
 {
-    "email" : "admin@ltwtech.it",
+    "email" : "client@ltwtech.it",
     "password" : "1234",
     "signedIn" : false
 }
 
 ###
 //Get Admin
-GET http://localhost:5005/admin/1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZG1pbkBsdXh1cnljYXJzLml0IiwiaWF0IjoxNjYyMDkwMzIwLCJleHAiOjE2NjIwOTM5MjB9.eup5_EFQxifrWel7jQSMOjq6XYIT7c2iFVVyUbpxn0A
+GET http://localhost:5005/moderator/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiYXZhdGFyIjoiMTY2Nzc5MzI4ODEzMy02NjgtNjY4OTIwMl9hdmF0YXItcHJvZmlsZS1oZC1wbmctZG93bmxvYWQucG5nIiwidXNlcm5hbWUiOiJMVFcgVGVjaCIsImVtYWlsIjoiY2xpZW50QGx0d3RlY2guaXQiLCJhdXRob3JpdHkiOiJ7XCJyb2xlXCI6W1wiY2xpZW50XCJdfSIsImlhdCI6MTcwMDQ3MDI5MywiZXhwIjoxNzAwNDczODkzfQ.-TzXgh2vzHVeP7OO2mBVLzZLwLDPiCeakdUNPuM-WqI
 
 
 ###
 //Edit admin
-PUT http://localhost:5005/admin/edit/1
+PUT http://localhost:5005/moderator/edit/1
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsImVtYWlsIjoiYWRtaW5AbHV4dXJ5Y2Fycy5pdCIsImlhdCI6MTY2MDg5MDk5NiwiZXhwIjoxNjYwODk0NTk2fQ.JuURSeIhtk2JMcpeB8gdME_1gCiveOWxcsGxEuHd8YA
 Content-Type: application/json
 
@@ -46,8 +49,8 @@ Content-Type: application/json
 }
 
 ###
-PUT http://localhost:5005/admin/access_control/9
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsImVtYWlsIjoiYWRtaW5AbHV4dXJ5Y2Fycy5pdCIsImlhdCI6MTY2MDg5MDk5NiwiZXhwIjoxNjYwODk0NTk2fQ.JuURSeIhtk2JMcpeB8gdME_1gCiveOWxcsGxEuHd8YA
+PUT http://localhost:5005/moderator/access_control/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiYXZhdGFyIjoiMTY2Nzc5MzI4ODEzMy02NjgtNjY4OTIwMl9hdmF0YXItcHJvZmlsZS1oZC1wbmctZG93bmxvYWQucG5nIiwidXNlcm5hbWUiOiJMVFcgVGVjaCIsImVtYWlsIjoiY2xpZW50QGx0d3RlY2guaXQiLCJhdXRob3JpdHkiOiJ7XCJyb2xlXCI6W1wiY2xpZW50XCJdfSIsImlhdCI6MTcwMDQ3MDI5MywiZXhwIjoxNzAwNDczODkzfQ.-TzXgh2vzHVeP7OO2mBVLzZLwLDPiCeakdUNPuM-WqI
 Content-Type: application/json
 
 {
@@ -55,19 +58,19 @@ Content-Type: application/json
 }
 
 ###
-DELETE http://localhost:5005/admin/delete/12
+DELETE http://localhost:5005/moderator/delete/12
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTEsImVtYWlsIjoiYWRtaW5AbHV4dXJ5Y2Fycy5pdCIsImlhdCI6MTY2MDkxODQyOSwiZXhwIjoxNjYwOTIyMDI5fQ.riMbldUorNmyieMkWsWLWNpwknAuJayPy8__gQ5voK8
 
 ###
-POST http://localhost:5005/admin/forgot_password
+POST http://localhost:5005/moderator/forgot_password
 Content-Type: application/json
 
 {
-    "email" : "vjvfc2k16@gmail.com"
+    "email" : "client@ltwtech.it"
 }
 
 ###
-POST http://localhost:5005/admin/reset_password/17/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InZqdmZjMmsxNkBnbWFpbC5jb20iLCJpZCI6MTcsImlhdCI6MTY2NzM3ODYyMCwiZXhwIjoxNjY3Mzc4NjgwfQ.16tBQdQu6yhLWBwYslPEoW6cVGkfCO0cz_sCMBoInsI
+POST http://localhost:5005/moderator/reset_password/17/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InZqdmZjMmsxNkBnbWFpbC5jb20iLCJpZCI6MTcsImlhdCI6MTY2NzM3ODYyMCwiZXhwIjoxNjY3Mzc4NjgwfQ.16tBQdQu6yhLWBwYslPEoW6cVGkfCO0cz_sCMBoInsI
 Content-Type: application/json
 
 {
@@ -75,7 +78,7 @@ Content-Type: application/json
 }
 
 ###
-PUT http://localhost:5005/admin/change_password/21
+PUT http://localhost:5005/moderator/change_password/21
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjEsImF2YXRhciI6IjE2Njc1MzQ0OTg5MTEtZGVmYXVsdC1hdmF0YXIucG5nIiwidXNlcm5hbWUiOiJMVFcgVGVjaCIsImVtYWlsIjoiYWRtaW5AbHR3dGVjaC5pdCIsImF1dGhvcml0eSI6IntcInJvbGVcIjpbXCJhZG1pblwiLFwidXNlclwiXX0iLCJpYXQiOjE2Njc1NDA5NDAsImV4cCI6MTY2NzU0NDU0MH0.7WzgzSoqvWDm2SUvBsk0n_4qnRCtxiEzxoEtXdXOhcI
 Content-Type: application/json
 

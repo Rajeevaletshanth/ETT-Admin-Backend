@@ -89,3 +89,73 @@
   message: 'abc@gmail.com : Wrong Email/ Password combination!',
   timestamp: '2022-11-12T04:47:33.374Z'
 }
+{
+  level: 'error',
+  message: 'vjvfc2k16@gmail.com : Wrong Email/ Password combination!',
+  timestamp: '2023-11-21T09:06:43.345Z'
+}
+{
+  level: 'error',
+  message: 'vjvfc2k16@gmail.com : Wrong Email/ Password combination!',
+  timestamp: '2023-11-21T09:34:00.476Z'
+}
+{
+  level: 'error',
+  message: 'vjvfc2k16@gmail.com : Wrong Email/ Password combination!',
+  timestamp: '2023-11-21T09:34:03.203Z'
+}
+{
+  level: 'error',
+  message: 'admin@ltwtech.it : Wrong Email/ Password combination!',
+  timestamp: '2023-11-21T11:01:43.315Z'
+}
+{
+  level: 'error',
+  message: 'admin@ltwtech.it : Wrong Email/ Password combination!',
+  timestamp: '2023-11-21T11:01:46.200Z'
+}
+{
+  level: 'error',
+  message: 'admin@ltwtech.it : Wrong Email/ Password combination!',
+  timestamp: '2023-11-21T11:01:47.452Z'
+}
+{
+  level: 'error',
+  message: 'admin@ltwtech.it : Wrong Email/ Password combination!',
+  timestamp: '2023-11-21T11:01:48.933Z'
+}
+{
+  level: 'error',
+  message: 'admin@ltwtech.it : Wrong Email/ Password combination!',
+  timestamp: '2023-11-21T11:01:50.405Z'
+}
+{
+  level: 'error',
+  message: 'admin@ltwtech.it : Wrong Email/ Password combination!',
+  timestamp: '2023-11-21T11:01:51.999Z'
+}
+{
+  level: 'error',
+  message: 'admin@ltwtech.it : Wrong Email/ Password combination!',
+  timestamp: '2023-11-21T11:01:59.283Z'
+}
+{
+  level: 'error',
+  message: 'admin@ltwtech.it : Wrong Email/ Password combination!',
+  timestamp: '2023-11-21T11:02:03.574Z'
+}
+{
+  level: 'error',
+  message: 'admin@ltwtech.it : Wrong Email/ Password combination!',
+  timestamp: '2023-11-21T11:02:08.415Z'
+}
+{
+  level: 'error',
+  message: 'admin@ltwtech.it : Wrong Email/ Password combination!',
+  timestamp: '2023-11-21T11:29:19.668Z'
+}
+{
+  level: 'error',
+  message: 'admin@ltwtech.it : Wrong Email/ Password combination!',
+  timestamp: '2023-11-22T11:58:08.448Z'
+}

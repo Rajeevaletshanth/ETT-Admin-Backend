@@ -1,7 +1,8 @@
 const Sequelize = require('sequelize');
 const database = require('../db_connect');
 
-const Payment = database.define('payment', {
+
+const User = database.define('moderator', {
 
         // attributes
         id:{
@@ -10,37 +11,52 @@ const Payment = database.define('payment', {
             autoIncrement: true
         },       
 
-        admin_id:{
+        username:{
             type: Sequelize.STRING,
             allowNull: false,
         },
 
-        payment_intent_id: {
+        address:{
             type: Sequelize.STRING,
-            allowNull: false
         },
 
-        product_name:{
+        company:{
             type: Sequelize.STRING,
-            allowNull: false,
         },
 
-        product_id:{
+        company_type:{
             type: Sequelize.STRING,
-            allowNull: false,
         },
 
-        amount:{
+        website:{
             type: Sequelize.STRING,
-            allowNull: false,
         },
 
-        status:{
-            type: Sequelize.STRING
+        authority:{
+          type: Sequelize.STRING,
+          allowNull: false,
+        },
+
+        phone_no:{
+          type: Sequelize.STRING,
+        },
+
+        email:{
+          type: Sequelize.STRING,
+          allowNull: false,
+        },
+
+        password:{
+          type: Sequelize.STRING,
+          allowNull: false,
+        },
+
+        avatar:{
+          type: Sequelize.STRING
         },
 
         is_deleted:{
-            type: Sequelize.BOOLEAN
+          type: Sequelize.BOOLEAN
         },
 
         createdAt: {
@@ -57,5 +73,6 @@ const Payment = database.define('payment', {
     freezeTableName: true
 });
 
+// Admin.sync({ force: true })
 
-module.exports= Payment;
+module.exports= User;
