@@ -7,6 +7,12 @@ const database = new Sequelize(process.env.PG_DATABASE, process.env.PG_USER, pro
     host: process.env.PG_HOST,
     port: process.env.PG_PORT,
     dialect: 'postgres',
+    dialectOptions: {
+        ssl: {
+            require: true,
+            rejectUnauthorized: false
+        }
+    },
     logging: false
 })
 
